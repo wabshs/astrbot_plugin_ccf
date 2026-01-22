@@ -31,10 +31,6 @@ class MyPlugin(Star):
             yield event.plain_result("请在指令后输入B站UID，例如：/ccf 384558170")
             return
 
-        if not vmid.isdigit():
-            yield event.plain_result("UID格式错误，请输入纯数字。")
-            return
-
         # 发送提示，告诉用户正在查询（因为翻页可能需要几秒钟）
         yield event.plain_result(f"正在分析 UID: {vmid} 的关注列表，请稍候...")
 
