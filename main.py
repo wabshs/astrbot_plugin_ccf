@@ -53,14 +53,14 @@ class MyPlugin(Star):
     # -------------------------------------------------------
     @filter.command("ccf")
     async def check_composition(self, event: AstrMessageEvent, vmid: str):
-        """查询B站UID成分，用法：/ccf 384558170"""
+        """查询B站UID成分，用法：/ccf 12345678"""
 
         # 这里的 vmid 已经是 AstrBot 帮你剥离好的字符串了
-        # 比如用户发 "/ccf 123456"，这里 vmid 就是 "123456"
+        # 比如用户发 "/ccf 12345678"，这里 vmid 就是 "12345678"
 
         if not vmid:
-            # 虽然框架通常会处理缺少参数的情况，但加个保险
-            yield event.plain_result("请提供B站UID，例如：/ccf 384558170")
+            # 加个保险
+            yield event.plain_result("请提供B站UID，例如：/ccf 12345678")
             return
 
         # 简单校验是否为纯数字
