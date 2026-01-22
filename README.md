@@ -40,7 +40,7 @@ IDENTITY_MAP = {
 
 指令格式： /ccf <B站UID>
 
-示例： /ccf 384558170
+示例： /ccf 12345678
 
 ## 📝 输出样例
 ```plaintext
